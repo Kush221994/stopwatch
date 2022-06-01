@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 100);
+  });
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <div className="timer">
+          <h1 className="time">
+          <div className="timetext">
+          <span className="digit">00</span>
+            <span className="digit">Hr</span>
+            <span className="digit">00</span>
+            <span className="digit">Min</span>
+            <span className="digit">00</span>
+            <span className="digit">Sec</span>
+            <div className="digit">{count}</div>
+          </div>
+          </h1>
+          
+          <div className="buttoncontained">
+            <button className="btn">Start</button>
+            <button className="btn" value="stop">
+              Stop
+            </button>
+            <button className="btn">Reset</button>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
