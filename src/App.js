@@ -1,14 +1,7 @@
-import React from "react";
-import Stopwatch from "./components/stopwatch/Stopwatch";
+import Stopwatch from "./components/stopwatch/stopwatch";
 
 const App = () => {
-
-  return (
-    <>
-    <Stopwatch />
-     
-    </>
-  );
+  return <Stopwatch />;
 };
 
 export default App;

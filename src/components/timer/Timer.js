@@ -1,23 +1,18 @@
-import React from "react";
-
-const Timer=({ value })=>{
-    return (
-        <>
-         
-            <div>
-            <div>
-              <span className="digit">{Math.floor(Math.floor(value/1000)/60)}</span>
-              <span className="digit">min. </span>
-              <span className="digit">{Math.floor(value/1000)}</span>
-              <span className="digit">sec. </span>
-              <span className="digit">{value}</span>
-              <span className="digit">msec</span>
-              </div>
-            </div>
-        
-            
-        </>
-    )
-}
+const Timer = ({ value }) => {
+  return (
+    <div>
+      <span className="digit">
+        {("00" + Math.floor(Math.floor(value / (1000 * 60)))).slice(-2)}
+      </span>
+      <span className="digit">min. </span>
+      <span className="digit">
+        {("00" + Math.floor(value / 1000)).slice(-2)}
+      </span>
+      <span className="digit">sec. </span>
+      <span className="digit">{("00" + Math.floor(value / 10)).slice(-2)}</span>
+      <span className="digit">msec</span>
+    </div>
+  );
+};
 
 export default Timer;
