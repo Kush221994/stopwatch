@@ -1,4 +1,4 @@
-import Stopwatch from "./components/stopwatch/stopwatch";
+import Stopwatch from "./components/stopwatch/Stopwatch";
 
 const App = () => {
   return <Stopwatch />;

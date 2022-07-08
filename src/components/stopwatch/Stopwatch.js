@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Timer from "../timer/timer";
+import Timer from "../timer/Timer";
 import Button from "../buttons/button";
 import Lap from "../lap/lap";
 
